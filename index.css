@@ -1,0 +1,209 @@
+html {
+  font-size: 16px; }
+
+body {
+  margin: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Ubuntu-R"; }
+
+@font-face {
+  font-family: "Ubuntu-R";
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/Ubuntu-R.woff2") format("woff2"), url("./fonts/Ubuntu-R.woff") format("woff"); }
+
+.drawers {
+  font-size: 0;
+  margin: auto;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  .drawers > * {
+    display: inline-block;
+    font-size: 16px;
+    font-size: 1rem; }
+  .drawers.drawer__opened_left {
+    padding-left: 20.83333%; }
+  .drawers.drawer__opened_right {
+    padding-right: 33.33333%; }
+
+.drawer__left {
+  position: absolute;
+  top: 0;
+  left: -20.83333%;
+  bottom: 0;
+  height: 100%;
+  width: 20.83333%;
+  vertical-align: top;
+  background-color: #3b3b3b;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  .drawer__opened_left .drawer__left {
+    left: 0; }
+
+.drawer__center {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto; }
+
+.drawer__right {
+  position: absolute;
+  top: 0;
+  right: -33.33333%;
+  bottom: 0;
+  height: 100%;
+  background-color: #3b3b3b;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  width: 33.33333%;
+  vertical-align: top; }
+  .drawer__opened_right .drawer__right {
+    right: 0; }
+
+.drawer__toggle {
+  position: absolute;
+  top: 50%;
+  padding: 15px;
+  color: #fff;
+  background-color: black; }
+
+.drawer__toggle_left {
+  left: 100%;
+  border-radius: 0 100% 100% 0; }
+
+.drawer__toggle_right {
+  right: 100%;
+  border-radius: 100% 0 0 100%; }
+
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  color: #fff;
+  height: 100%; }
+  .sidebar__header, .sidebar__footer {
+    background-color: #4e4e4e; }
+  .sidebar__body {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    overflow: auto; }
+
+.logo {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 0 1rem; }
+
+.menu,
+.menu_sub {
+  padding-left: 1.8rem;
+  list-style: none; }
+
+.menu_sub {
+  padding-bottom: 0.5rem; }
+
+.menu__focused {
+  color: #e83100 !important; }
+  .menu__focused .menu__icon {
+    fill: #e83100; }
+
+.menu__link {
+  padding: 4px 5px;
+  color: #fff;
+  text-decoration: none;
+  display: block; }
+  .menu__link:hover {
+    color: #e83100; }
+    .menu__link:hover svg {
+      fill: #e83100; }
+
+.menu__icon {
+  height: 1em;
+  fill: #fff;
+  margin-right: 0.6em; }
+
+.menu__icon_file {
+  margin-right: 0.7em; }
+
+.menu__icon, .menu__text {
+  display: inline-block;
+  vertical-align: baseline; }
+
+.directory_management {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.dm__ {
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .dm__ svg {
+    fill: #fff;
+    height: 2rem;
+    overflow: hidden; }
+
+.dm___:hover {
+  fill: #e83100; }
+
+.dm___ + .dm___ {
+  margin-left: 1rem; }
+
+.directory_edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.de__ {
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .de__ svg {
+    fill: #fff;
+    height: 2rem;
+    overflow: hidden; }
+
+.de___ + .de___ {
+  margin-left: 1rem; }
